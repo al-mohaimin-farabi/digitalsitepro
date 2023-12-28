@@ -1,0 +1,48 @@
+.header_bg {
+  background-color: hsla(0, 0%, 0%, 1);
+  background-image: radial-gradient(
+      at 29% 90%,
+      hsla(0, 0%, 6%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 67% 40%, hsla(84, 0%, 6%, 1) 0px, transparent 50%),
+    radial-gradient(at 85% 14%, hsla(315, 21%, 28%, 0.45) 0px, transparent 50%),
+    radial-gradient(at 5% 9%, hsla(261, 0%, 0%, 0.27) 0px, transparent 50%),
+    radial-gradient(at 11% 24%, hsla(262, 32%, 33%, 1) 0px, transparent 50%),
+    radial-gradient(at 55% 65%, hsla(0, 0%, 6%, 1) 0px, transparent 50%),
+    radial-gradient(at 9% 81%, hsla(315, 21%, 28%, 0.98) 0px, transparent 50%);
+
+  /* clip-path: polygon(100% 0, 100% 80%, 0 100%, 0 0); */
+}
+
+.gradient_text {
+  background: linear-gradient(180deg, #5444f5, #9a6ce1);
+  background-clip: text;
+  color: transparent;
+}
+.gradient_bg {
+  background: linear-gradient(180deg, #5444f5, #9a6ce1);;
+  backdrop-filter: blur(70px);
+}
+.card_gradient_text {
+  background-color: transparent;
+  background-clip: text;
+  color: white;
+  
+}
+
+.border_bg {
+  background: linear-gradient(180deg, #5444f5, #9a6ce1);
+}
+.glow {
+  background-color: transparent;
+/*     
+  box-shadow: 0 0 5px #294ce9, 0 0 25px #8515b9, 0 0 50px #1aaace,
+    0 0 200px #b003f4; */
+}
+
+@media only screen and (max-width: 767px) {
+  /* .header_bg {
+    /* clip-path: polygon(100% 0, 100% 85%, 0 100%, 0 0); */
+  /* }  */
+}

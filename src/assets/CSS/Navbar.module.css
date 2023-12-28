@@ -1,0 +1,22 @@
+.navbar_bg {
+  /* background-color:hsla(222,47%,11%,1);
+  background-image:
+  radial-gradient(at 80% 10%, hsla(315,33%,11%,0.04) 0px, transparent 50%),
+  radial-gradient(at 72% 40%, hsla(315,32%,10%,0.81) 0px, transparent 50%),
+  radial-gradient(at 32% 89%, hsla(315,21%,28%,0.63) 0px, transparent 50%),
+  radial-gradient(at 94% 98%, hsla(0,0%,0%,0.55) 0px, transparent 50%),
+  radial-gradient(at 25% 16%, hsla(262,32%,33%,0.52) 0px, transparent 50%); */
+
+  background-color: hsla(0, 0%, 0%, 1);
+  background-image: radial-gradient(
+      at 29% 90%,
+      hsla(0, 0%, 6%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 67% 40%, hsla(84, 0%, 6%, 1) 0px, transparent 50%),
+    radial-gradient(at 85% 14%, hsla(315, 21%, 28%, 0.45) 0px, transparent 50%),
+    radial-gradient(at 5% 9%, hsla(261, 0%, 0%, 0.27) 0px, transparent 50%),
+    radial-gradient(at 11% 24%, hsla(262, 32%, 33%, 1) 0px, transparent 50%),
+    radial-gradient(at 55% 65%, hsla(0, 0%, 6%, 1) 0px, transparent 50%),
+    radial-gradient(at 9% 81%, hsla(315, 21%, 28%, 0.98) 0px, transparent 50%);
+}
