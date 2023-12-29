@@ -23,16 +23,22 @@ const Services = () => {
     initial: {
       transform: "translateY( 100%)",
       willChange: "transform",
+      width: "100%",
+      height: "0%",
       transition: { duration: 0.5, ease: "easeInOut" },
     },
     hovered: {
       transform: "translateY( 0%)",
       transformOrigin: "bottom",
+      width: "100%",
+      height: "100%",
       transition: { duration: 0.5, ease: "easeInOut" },
     },
     exit: {
       transform: "translateY( 100%)",
       transformOrigin: "bottom",
+      width: "100%",
+      height: "0%",
       transition: { duration: 0.5, ease: "easeInOut" },
     },
   };
