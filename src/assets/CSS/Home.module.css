@@ -16,19 +16,65 @@
 }
 
 .gradient_text {
-  background: linear-gradient(180deg, #5444f5, #9a6ce1);
+  background: linear-gradient(180deg, #4C40F7, #9a6ce1);
   background-clip: text;
   color: transparent;
 }
 .gradient_bg {
-  background: linear-gradient(180deg, #5444f5, #9a6ce1);;
-  backdrop-filter: blur(70px);
+  background: linear-gradient(180deg, #4C40F7, #9a6ce1);
 }
 .card_gradient_text {
-  background-color: transparent;
+  background: linear-gradient(90deg, #4C40F7, #9a6ce1);
+  /* background: linear-gradient(90deg, #5444f5, #9a6ce1); */
   background-clip: text;
-  color: white;
-  
+  color: transparent;
+}
+
+/* .card_inner_body {
+  position: relative;
+
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: transform 0.3s ease-out;
+}
+.card_content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #5444f5;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-out;
+}
+
+.card_inner_body:hover .card_content {
+  transform: translateY(0);
+} */
+
+.card_title {
+  position: relative;
+  width: max-content;
+}
+
+.card_title::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  left: -10px;
+  bottom: -2px;
+  width: 115%;
+  background-color: aliceblue;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1500ms ease;
+}
+
+.card_inner_body:hover .card_title::after {
+  left: -5px;
+  transform: scaleX(1);
 }
 
 .border_bg {
@@ -36,7 +82,7 @@
 }
 .glow {
   background-color: transparent;
-/*     
+  /*     
   box-shadow: 0 0 5px #294ce9, 0 0 25px #8515b9, 0 0 50px #1aaace,
     0 0 200px #b003f4; */
 }

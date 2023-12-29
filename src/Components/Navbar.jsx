@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/Images/logo.svg";
 import { FaRegUserCircle } from "react-icons/fa";
@@ -9,6 +10,14 @@ import NavCss from "../assets/CSS/Navbar.module.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const variants = {
+    open: { opacity: 1, x: 0, transition: { duration: 0.3, ease: "linear" } },
+    closed: {
+      opacity: 0,
+      x: "100%",
+      transition: { duration: 0.3, ease: "linear" },
+    },
+  };
 
   return (
     <>
@@ -88,7 +97,7 @@ const Navbar = () => {
               <FaRegUserCircle />
             </NavLink>
             <select
-              className="text-base mx-2 text-[#FFAD60] rounded border-2 bg-transparent  h-[50px] border-[#FFAD60] hover:text-[#ffffff] hover:bg-[#FFAD60]  py-2 px-4 transition-colors duration-200 ease-linear"
+              className="text-base mx-2 text-[#FFAD60] rounded border-2 bg-transparent  h-[50px] border-[#FFAD60] hover:text-[#ffffff] hover:bg-[#FFAD60]  py-2 px-2 lg:px-4 transition-colors duration-200 ease-linear"
               name="Lng"
               id="lng">
               <option value="Bn">Bangla</option>
@@ -96,7 +105,7 @@ const Navbar = () => {
             </select>
             <NavLink
               to="/signup"
-              className="text-base mx-2 text-[#FFAD60] rounded border-2 border-[#FFAD60] hover:text-[#ffffff] hover:bg-[#FFAD60]  py-2 px-4 transition-colors duration-200 ease-linear h-[50px]">
+              className="text-base mx-2 text-[#FFAD60] rounded border-2 border-[#FFAD60] hover:text-[#ffffff] hover:bg-[#FFAD60]  py-2 px-2 lg:px-4 transition-colors duration-200 ease-linear h-[50px]">
               SignUp
             </NavLink>
           </div>
@@ -110,15 +119,14 @@ const Navbar = () => {
       </nav>
 
       {/* mobile menu */}
-      <nav
-        className={`md:hidden  ${NavCss.navbar_bg} text-white z-[99999]  ${
-          isOpen
-            ? "fixed top-0 right-0 transition-all duration-300 ease-in-out transform translate-x-0"
-            : "fixed right-[-100%]"
-        } flex flex-col items-end mobile__menu  h-[100vh]`}>
+      <motion.nav
+        animate={isOpen ? "open" : "closed"}
+        variants={variants}
+        className={`md:hidden  ${NavCss.navbar_bg} text-white z-[99999]  
+           fixed top-0 right-0 flex flex-col items-end mobile__menu  h-[100vh]`}>
         <button
           onClick={() => setIsOpen(false)}
-          className="h-16 mt-6 p-2 mx-4 md:hidden text-4xl">
+          className="h-16 mt-4  p-2 mx-4 md:hidden text-4xl">
           <IoMdClose />
         </button>
         <div className="menu__list p-2 mt-2">
@@ -181,7 +189,7 @@ const Navbar = () => {
             </NavLink>
           </div>
         </div>
-      </nav>
+      </motion.nav>
     </>
   );
 };
